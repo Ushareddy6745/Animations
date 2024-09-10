@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-color:rgb(38, 150, 176);
+      }
+      .container{
+        transform: translateX(30%);
+      }
+      .rotor {
+        position: relative;
+        top: 160px;
+        left: 160px;
+        height: 40px;
+        width: 40px;
+        background-color:black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+      .blade1 {
+        margin-top: 15px;
+        position: absolute;
+        width:400px;
+        height:15px;
+        background-color:grey;
+        border-radius:50%;
+        animation: blade1 2s linear infinite;
+      }
+      .blade2 {
+        margin-top: 15px;
+        position: absolute;
+        width:400px;
+        height: 15px;
+        background-color: grey;
+        border-radius: 50%;
+        animation: blade2 2s linear infinite;
+      }
+      @keyframes blade1 {
+        0% {
+          transform: rotate(90deg);
+        }
+        100% {
+          transform: rotate(270deg);
+        }
+      }
+      @keyframes blade2 {
+        0% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .pole{
+        position: relative;
+        height: 300px;
+        width: 15px;
+        background-color:white;
+        display: flex;
+        align-content: baseline;
+        top: 39px;
+        z-index: -1;
+        animation: stand 1s linear;
+      }
+     
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rotor">
+          <div class="blade1"></div>
+          <div class="blade2"></div>
+          <div class="pole"></div>
+          </div>
+</body>
+</html>
